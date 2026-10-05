@@ -1,0 +1,7 @@
+*.class
+build/
+dist/
+# Archivos de datos que genera el programa al salir
+Articulos.txt
+Clientes.txt
+Ventas.txt
