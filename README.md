@@ -6,7 +6,7 @@ Desarrolladores:
 - Francisco Javier Bautista Bautista
 - Antonio Angeles Trejo
 - Rodrigo Gael Contreras Corona
-- Jose Pastrana Segundo
+- Adair Gonzalez Martin
 
 ## Estructura
 

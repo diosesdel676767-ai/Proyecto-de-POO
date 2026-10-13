@@ -4,7 +4,7 @@
  *   Francisco Javier Bautista Bautista
  *   Antonio Angeles Trejo
  *   Rodrigo Gael Contreras Corona
- *   Jose Pastrana Segundo
+ *   Adair Gonzalez Martin
  */
 package pck_tienda;
 
@@ -134,12 +134,15 @@ public class TiendaDeRopa {
         do {
             do {
                 op = 0;
-                op = getEntero(menu, "Opciones");
+                try {
+                    op = Integer.parseInt(JOptionPane.showInputDialog(null, menu, "Opciones", 3));
 
-                if (op < 1 || op > 17) {
-                    JOptionPane.showMessageDialog(null, "La opción es incorrecta.\nDebe ser entre 1 y 17", "Error de entrada", 2);
+                    if (op < 1 || op > 17) {
+                        JOptionPane.showMessageDialog(null, "La opción es incorrecta.\nDebe ser entre 1 y 17", "Error de entrada", 2);
+                    }
+                } catch (NumberFormatException e) {
+                    JOptionPane.showMessageDialog(null, "La opción debe ser numérica.\nNo dejes el campo vacío.", "Error de entrada", 2);
                 }
-
             } while (op < 1 || op > 17);
 
             switch (op) {
@@ -1217,27 +1220,7 @@ public class TiendaDeRopa {
                 + "Francisco Javier Bautista Bautista\n"
                 + "Antonio Angeles Trejo\n"
                 + "Rodrigo Gael Contreras Corona\n"
-                + "Jose Pastrana Segundo", "Copyright", 1);
-    }
-
-    public static int getEntero(String mensaje, String titulo) {
-
-        int entValido, check;
-
-        do {
-            entValido = 0;
-            check = 0;
-
-            try {
-                entValido = Integer.parseInt(JOptionPane.showInputDialog(null, mensaje, titulo, 3));
-            } catch (NumberFormatException e) {
-                JOptionPane.showMessageDialog(null, "La opción debe ser numérica.\nIntroduzca una de las opciones disponibles", "Error de entrada", 2);
-                check++;
-            }
-
-        } while (check != 0);
-
-        return entValido;
+                + "Adair Gonzalez Martin", "Copyright", 1);
     }
 
     //tipo 1 = Camisa, tipo 2 = Pantalon
